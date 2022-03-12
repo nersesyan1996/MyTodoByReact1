@@ -4,6 +4,8 @@ import Context from "./Context";
 import Todo from "./Todo";
 import React, { useReducer } from "react";
 import reducer from "./reducer";
+import Todo2 from './todo1/TodoInp.jsx'
+
 function App() {
   let [state, dispatch] = useReducer(
     reducer,
@@ -39,6 +41,7 @@ function App() {
         onKeyDown={addTodo}
       />
       <Todo todo={state} />
+      <Todo2 />
     </Context.Provider>
   );
 }
